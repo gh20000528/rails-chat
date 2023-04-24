@@ -16,15 +16,15 @@
         margin-left: 10px
       }
     }
-    // &.me{
-    //   .content-container{
-    //     float: right;
-    //     .author{
-    //       background-color: #007bff;
-    //       color:white
-    //     }
-    //   }
-    // }
+    &.me{
+      .content-container{
+        float: right;
+        .author{
+          background-color: #007bff;
+          color:white
+        }
+      }
+    }
   }
   .chat-box{
     position: absolute;
