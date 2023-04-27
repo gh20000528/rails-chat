@@ -39,6 +39,9 @@ document.addEventListener('turbolinks:load', ()=> {
       
       const messageContainer = document.getElementById('messages')
       messageContainer.innerHTML = messageContainer.innerHTML + html
+
+
+      console.log(html);
     }
   });
 })
