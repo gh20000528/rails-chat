@@ -13,7 +13,7 @@ document.addEventListener('turbolinks:load', ()=> {
     consumer.subscriptions.remove(subscription)
   })
 
-  consumer.subscriptions.create({channel:"RoomChannel", room_id: room_id},{
+  consumer.subscriptions.create({ channel:"RoomChannel", room_id },{
     connected() {
       console.log("connected to room channel" + room_id);
       // Called when the subscription is ready for use on the server
@@ -25,7 +25,6 @@ document.addEventListener('turbolinks:load', ()=> {
   
     received(data) {
       // Called when there's incoming data on the websocket for this channel
-      console.log(data);
       const user_element = document.getElementById('user-id')
       const user_id = Number(user_element.getAttribute('data-user-id'))
       
@@ -40,8 +39,6 @@ document.addEventListener('turbolinks:load', ()=> {
       const messageContainer = document.getElementById('messages')
       messageContainer.innerHTML = messageContainer.innerHTML + html
 
-
-      console.log(html);
     }
   });
 })
